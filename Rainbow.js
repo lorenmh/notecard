@@ -28,17 +28,37 @@ export default class RainbowString extends Component {
     let { string } = this.props;
 
     return (
-      string
-        .split('')
-        .map(
-          (c,i) => (
-            <RainbowChar
-              color={RCOLORS[i%RLEN]}
-              key={i}
-              char={c}
-            />
+      <View style={styles.wrap}>
+        {string
+          .split('')
+          .map(
+            (c,i) => (
+              <RainbowChar
+                color={RCOLORS[i%RLEN]}
+                key={i}
+                char={c}
+              />
+            )
           )
-        )
+        }
+      </View>
     );
   }
 }
+
+const styles = StyleSheet.create({
+  wrap: {
+    padding: '5% 20%',
+    borderRadius: 5,
+    flexDirection: 'row',
+    justifyContent: 'center',
+    backgroundColor: 'rgba(70,75,80,1)',
+    shadowColor: 'black',
+    shadowOffset: {
+      width: 0,
+      height: 2
+    },
+    shadowOpacity: 1,
+    shadowRadius: 0,
+  },
+});

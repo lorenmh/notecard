@@ -19,11 +19,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     flexWrap: 'wrap',
-    backgroundColor: 'rgb(15,20,40)',
+    backgroundColor: 'rgb(240,245,250)',
     alignItems: 'center',
     justifyContent: 'center',
-  },
-  text: {
-    color: 'rgb(255,0,0)'
   },
 });
